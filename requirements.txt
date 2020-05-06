@@ -1,0 +1,16 @@
+azure-functions
+azure-storage-blob
+click
+gopro2gpx==0.1
+gpxpy
+moviepy
+pandas
+psycopg2-binary
+pyproj
+requests
+scipy
+shapely
+tqdm
+
+
+

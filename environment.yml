@@ -1,0 +1,24 @@
+name: etl-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  # Python dependencies
+  - python>=3.6,<3.8
+  - shapely
+  - psycopg2
+  - pyproj
+  - gpxpy
+  - requests
+  - tqdm
+  - jupyter
+  - pandas
+  - click
+  - python-dotenv
+  - scipy
+  - pip
+  - pip :
+    - azure
+    - gopro2gpx==0.1
+    - moviepy
+

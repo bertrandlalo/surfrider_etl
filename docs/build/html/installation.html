@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; Surfrider ETL 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="prev" title="Project Overview" href="general_documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Surfrider ETL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="general_documentation.html">Project Overview</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guidelines">Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-create-virtual-conda-env">How to create virtual/conda env ?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">Environment variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prod-docker-azure-deployment">Prod: Docker / Azure deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ETL script</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="etl.html">ETL package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Surfrider ETL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Python 3 distribution</p></li>
+<li><p>Clone the repository</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone https://github.com/surfriderfoundationeurope/etl
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><dl class="simple">
+<dt>Copy file <cite>example.env</cite>, rename in <cite>.env</cite> and</dt><dd><p>set environment variables</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
+<p>Install this package by adding the following line to your
+<code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> file as follows:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="p p-Indicator">-</span> <span class="nt">pip</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git+ssh://git@github.com/surfriderfoundationeurope/etl.git@vX.Y.Z#egg=etl</span>
+    <span class="c1"># or</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git+https://github.com/surfriderfoundationeurope/etl.git@vX.Y.Z#egg=etl</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">vX.Y.Z</span></code> is the exact version number that you need.</p>
+<p>If you want to develop on Surfrider ETL <em>at the same time</em> that you are
+developing some other project, clone this repository and install it on
+development mode:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git clone git+ssh://git@github.com/surfriderfoundationeurope/etl.git
+<span class="gp">$</span> <span class="nb">cd</span> etl
+<span class="gp">$</span> pip install -e .
+</pre></div>
+</div>
+<p>Note that this <em>development mode</em> is not recommended for reproducible analyses
+because you might end up with a locally modified version that is not available
+to other people.</p>
+<div class="section" id="how-to-create-virtual-conda-env">
+<h3>How to create virtual/conda env ?<a class="headerlink" href="#how-to-create-virtual-conda-env" title="Permalink to this headline">¶</a></h3>
+<p>You have the choice between virtual env or conda env:</p>
+<ul>
+<li><dl>
+<dt>conda env</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda env create -f  environment.yml
+<span class="gp">$</span> conda activate etl-env
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>virtual env</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m venv etl-env
+<span class="gp">$</span> <span class="nb">source</span> etl-env/bin/activate
+<span class="gp">$</span> pip install -r requirements.txt
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="environment-variables">
+<h2>Environment variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>This environment variable is required if you work in data-mode ‘azure’ :</p>
+<dl class="std envvar">
+<dt id="envvar-CON_STRING">
+<code class="sig-name descname">CON_STRING</code><a class="headerlink" href="#envvar-CON_STRING" title="Permalink to this definition">¶</a></dt>
+<dd><p>To connect to Azure Blob Storage</p>
+</dd></dl>
+
+<p>This environment variable is required if you need to call the AI :</p>
+<dl class="std envvar">
+<dt id="envvar-AI_URL">
+<code class="sig-name descname">AI_URL</code><a class="headerlink" href="#envvar-AI_URL" title="Permalink to this definition">¶</a></dt>
+<dd><p>URL to AI API</p>
+</dd></dl>
+
+<p>These environment variables is required if you need to insert trash to db :</p>
+<dl class="std envvar">
+<dt id="envvar-PGSERVER-PGDATABASE-PGDATABASE-PGUSERNAME-PGPWD">
+<span id="envvar-PGSERVER, PGDATABASE, PGDATABASE, PGUSERNAME, PGPWD"></span><code class="sig-name descname">PGSERVER, PGDATABASE, PGDATABASE, PGUSERNAME, PGPWD</code><a class="headerlink" href="#envvar-PGSERVER-PGDATABASE-PGDATABASE-PGUSERNAME-PGPWD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Info and identifier of PG database</p>
+</dd></dl>
+
+</div>
+<div class="section" id="prod-docker-azure-deployment">
+<h2>Prod: Docker / Azure deployment<a class="headerlink" href="#prod-docker-azure-deployment" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> docker build .
+</pre></div>
+</div>
+</div></blockquote>
+<p>Coming soon: How to deploy ?</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="general_documentation.html" class="btn btn-neutral float-left" title="Project Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Clément Leroux, Raphaël Courivaud, Raphaëlle Bertrand-Lalo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
